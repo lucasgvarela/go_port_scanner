@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// ScanResult ...
 type ScanResult struct {
 	Port  string
 	State string
