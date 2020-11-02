@@ -1,17 +1,13 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/elliotforbes/athena/port"
-)
+import "fmt"
 
 func main() {
 	fmt.Println("Port Scanner in Go")
 
-	open := port.ScanPort("tcp", "localhost", 1024)
-	fmt.Printf("Port open: %v\n", open)
+	result := ScanPort("tcp", "localhost", 1024)
+	fmt.Printf("Port open: %v\n", result)
 
-	results := port.InitialScan("localhost")
+	results := InitialScan("localhost")
 	fmt.Println(results)
 }
